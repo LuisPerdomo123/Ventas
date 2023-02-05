@@ -25,12 +25,24 @@ public class Orden {
     
         if(this.contadorProducto < Orden.MAX_PRODUCTOS){
         
-            productos[contadorOrdenes++] = producto;
+            this.productos[this.contadorOrdenes++] = producto;
         }
         else{
         
             System.out.println("Se ha superado el maximo de productos: " + Orden.MAX_PRODUCTOS);
         }
+    }
+    
+    public double calcularTotal(){
+    
+        double total = 0;
+        for (int i = 0; i < this.contadorProducto; i++) {
+//            Producto producto = this.productos[i];
+//            total += producto.getPrecio();//total = total + producto.getPrecio()
+            total += this.productos[i].getPrecio();
+        }
+        
+        return total;
     }
     
 }
