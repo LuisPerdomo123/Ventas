@@ -45,4 +45,16 @@ public class Orden {
         return total;
     }
     
+    public void mostrarOrden(){
+    
+        System.out.println("Id Orden: " + this.idOreden);
+        double totalOrden = this.calcularTotal();
+        System.out.println("Total de la orden: $"+totalOrden);
+        System.out.println("Productos de las Orden: ");
+        for (int i = 0; i < this.contadorProducto; i++) {
+            System.out.println(this.productos[i]);
+        }
+        
+    }
+    
 }
